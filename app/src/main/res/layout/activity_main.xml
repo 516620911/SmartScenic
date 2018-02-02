@@ -8,6 +8,48 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true" />
+        <ImageButton
+            android:id="@+id/ib_take_photo"
+            android:layout_width="79dp"
+            android:layout_height="79dp"
+            android:layout_alignBottom="@+id/ib_location"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/home_camera_icon"
+            />
+        <ImageButton
+            android:id="@+id/ib_location"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="17dp"
+            android:layout_marginRight="14dp"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_location_selector" />
+
+        <ImageButton
+            android:id="@+id/ib_refresh"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_above="@id/ib_location"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginRight="14dp"
+            android:background="@null"
+            android:scaleType="centerCrop"
+            android:src="@drawable/home_refresh_selector" />
+    </RelativeLayout>
 
     <include
         layout="@layout/app_bar_main"
@@ -22,5 +64,6 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"/>
+
 
 </android.support.v4.widget.DrawerLayout>
